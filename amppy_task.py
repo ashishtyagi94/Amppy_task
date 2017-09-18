@@ -1,8 +1,3 @@
-#from time import time
-#def time():
-#	return time
-
-
 def power(base,exp):
 	if(exp==1):
 		return(base)
