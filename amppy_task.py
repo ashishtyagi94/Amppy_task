@@ -13,5 +13,5 @@ if __name__=="__main__":
 	base=int(input("Enter base: "))
 	exp=int(input("Enter exponential value: "))
 	print("Result:",power(base,exp))
-        print"hi"
+        print"hi........"
 
