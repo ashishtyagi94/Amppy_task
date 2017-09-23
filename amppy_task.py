@@ -1,18 +1,26 @@
-def power(base,exp):
-	if(exp==1):
-		return(base)
-	if(exp!=1):
-		return(base*power(base,exp-1))
-def factor(fact):
-	if fact == 1:
-		return 1
-        elif fact ==0:
-                return 1
+from time import time
+def time_random():
+    return time() - float(str(time()).split('.')[0])
+def gen_random_range(min,max,frequency):
+    mod=1
+    lst=[]
+    count=0
+    while True:
+        mod = min%max
+        if count == frequency:
+            break
+        if ((int(str(time_random()).split('.')[1]) % max + mod) % max) !=0:
+            print (int(str(time_random()).split('.')[1]) % max + mod) % max
         else:
-                return fact * factor(fact-1)	
+            count -=1
+        count += 1
+        min += 1
+    return lst
 if __name__=="__main__":
-	base=int(input("Enter base: "))
-	exp=int(input("Enter exponential value: "))
-	print("Result:",power(base,exp))
-        print(factor(5))
-
+    print "Plz enter the range"
+    min=int(raw_input())
+    max=int(raw_input())
+    print "Plz enter the frequency"
+    frequency=int(raw_input())
+    print "Random Numbers"
+    gen_random_range(min,max,frequency)
