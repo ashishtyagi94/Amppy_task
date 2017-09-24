@@ -1,6 +1,6 @@
 from time import time # We have to take system time for calculation 
 def time_random():
-    return time() - float(str(time()).split('.')[0])
+    return time() - float(str(time()).split('.')[0]) # Calculating time quantum
 def gen_random_range(min,max,frequency):
     mod=1
     count=0 # used to terminate the loop
