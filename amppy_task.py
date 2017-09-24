@@ -1,4 +1,4 @@
-from time import time
+from time import time # We have to take system time for calculation 
 def time_random():
     return time() - float(str(time()).split('.')[0])
 def gen_random_range(min,max,frequency):
@@ -37,3 +37,4 @@ if __name__=="__main__":
     frequency=int(raw_input())
     print "Random Numbers"
     gen_random_range(min,max,frequency)
+
