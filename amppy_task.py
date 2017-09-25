@@ -14,10 +14,10 @@ def gen_random_range(min,max,frequency):
         higher_frequency = int((frequency * 73)/100) # Calculated 73 % biased for higher number
         lower_frequency = frequency - higher_frequency # Calculated 27 % biased for lesser number
         rnd =(int(str(time_random()).split('.')[1]) % max + mod) % max # Calculated random number b/w a given range
-        if rnd == 0:# Skipped Zero if exist during calculating modular division 
-            continue
         if count == frequency: # Terminated condition
             break
+        if rnd == 0:# Skipped Zero if exist during calculating modular division 
+            continue
         if rnd > mid and higher_frequency > high_counter:# biased condition for higher number than mid
             print rnd
             high_counter +=1
@@ -37,4 +37,3 @@ if __name__=="__main__":
     frequency=int(raw_input())
     print "Random Numbers"
     gen_random_range(min,max,frequency)
-
