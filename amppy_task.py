@@ -30,10 +30,9 @@ def gen_random_range(min,max,frequency):
     print "Here the frequency of numbers Greater than" ,mid,"is = ",higher_frequency
     print "Here the frequency of numbers Less than " ,mid,"is = ",lower_frequency
 if __name__=="__main__":
-    print "Plz enter the range"
-    min=int(raw_input())
+    print "Plz enter the maximun range number b/w 1 to 1000"
     max=int(raw_input())
     print "Plz enter the frequency"
     frequency=int(raw_input())
     print "Random Numbers"
-    gen_random_range(min,max,frequency)
+    gen_random_range(1,max,frequency)
